@@ -41,7 +41,7 @@ function btnClicked() {
   const ranArray = pickRandomTwoNum();
 
   const ranDeg = Math.floor(Math.random() * 91);
-  const hourHandDeg = date.getHours() / 24 + date.getMinutes() / 720;
+  const hourHandDeg = date.getHours() / 12 + date.getMinutes() / 720;
   console.log(hourHandDeg);
 
   body.style.background = `conic-gradient(from ${hourHandDeg}turn at 50% 50%,${colors[ranArray[0]]},${colors[ranArray[1]]})`;
