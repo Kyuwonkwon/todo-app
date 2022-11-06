@@ -22,8 +22,6 @@ const colors = [
 const body = document.body;
 const btn = document.querySelector("button");
 
-btnClicked();
-
 function pickRandomTwoNum() {
   let randomIndexArray = [];
   for (let i = 0; i < 2; i++) {
@@ -48,3 +46,18 @@ function btnClicked() {
 }
 
 btn.addEventListener("click", btnClicked);
+
+function backgroundPicture() {
+  body.style.background;
+}
+
+const images = ["bg/0.jpg", "bg/1.jpg", "bg/2.jpg", "bg/3.jpg", "bg/4.jpg"];
+
+const chosenImage = images[Math.floor(Math.random() * images.length)];
+
+const bgimage = document.createElement("img");
+
+bgimage.src = `${chosenImage}`;
+bgimage.className = "bg-image";
+document.body.appendChild(bgimage);
+// body.style.backgroundImage = "url('" + bg/0.jpg + "')";
