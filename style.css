@@ -21,9 +21,6 @@ body {
   background-color: "";
   transition: background-color 4s;
 }
-.hidden {
-  display: none;
-}
 
 .upper {
   width: 100vw;
@@ -36,10 +33,39 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
 #login-form {
-  margin-top: 10vh;
+  z-index: 2;
+}
+#login-form :first-child {
+  position: absolute;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+  opacity: 0.9;
+  font-size: 8vmax;
+  display: flex;
+  flex-direction: column;
   align-self: center;
+  width: 40vw;
+  top: 40vh;
+  left: 30vw;
+  background: none;
+  border: none;
+  border-bottom: 0.5vmin solid rgba(255, 255, 255, 0.5);
+  caret-color: rgba(255, 255, 255, 0.6);
+  color: white;
+}
+#login-form :first-child::placeholder {
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+  opacity: 0.9;
+  font-size: 5vmax;
+
+  text-align: center;
+}
+
+#login-form input:focus::-webkit-input-placeholder {
+  opacity: 0;
 }
 
 main {
@@ -85,15 +111,21 @@ main #weather {
   padding: 1vmin;
   margin-bottom: 2vmin;
   background: transparent;
-  border: 2px solid rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 22px;
   width: 196px;
+  caret-color: rgba(255, 255, 255, 0.6);
+  color: white;
 }
 #todo-form input::placeholder {
   color: white;
   text-shadow: -2px 0px rgba(0, 0, 0, 0.3), 0px 2px rgba(0, 0, 0, 0.3), 2px 0px rgba(0, 0, 0, 0.3), 0px -2px rgba(255, 255, 255, 0.3);
   opacity: 0.8;
 }
+#todo-form input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
 #todo-list {
   display: flex;
   flex-direction: column;
@@ -142,4 +174,10 @@ main #weather {
   main #clock {
     font-size: 8vmin;
   }
+}
+.hidden {
+  display: none;
+}
+.transparency {
+  opacity: 0;
 }
