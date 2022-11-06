@@ -20,44 +20,10 @@ const colors = [
 ];
 
 const body = document.body;
-const btn = document.querySelector("button");
-
-function pickRandomTwoNum() {
-  let randomIndexArray = [];
-  for (let i = 0; i < 2; i++) {
-    const randomNum = Math.floor(Math.random() * 18);
-    if (randomIndexArray.indexOf(randomNum) === -1) {
-      randomIndexArray.push(randomNum);
-    } else {
-      i--;
-    }
-  }
-  return randomIndexArray;
-}
-function btnClicked() {
-  const date = new Date();
-  const ranArray = pickRandomTwoNum();
-
-  const ranDeg = Math.floor(Math.random() * 91);
-  const hourHandDeg = date.getHours() / 12 + date.getMinutes() / 720;
-  console.log(hourHandDeg);
-
-  body.style.background = `conic-gradient(from ${hourHandDeg}turn at 50% 50%,${colors[ranArray[0]]},${colors[ranArray[1]]})`;
-}
-
-btn.addEventListener("click", btnClicked);
-
-function backgroundPicture() {
-  body.style.background;
-}
-
 const images = ["bg/0.jpg", "bg/1.jpg", "bg/2.jpg", "bg/3.jpg", "bg/4.jpg"];
-
 const chosenImage = images[Math.floor(Math.random() * images.length)];
-
 const bgimage = document.createElement("img");
 
 bgimage.src = `${chosenImage}`;
 bgimage.className = "bg-image";
 document.body.appendChild(bgimage);
-// body.style.backgroundImage = "url('" + bg/0.jpg + "')";
