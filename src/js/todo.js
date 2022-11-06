@@ -22,11 +22,11 @@ function paintToDo(newToDo) {
   li.id = newToDo.id;
   const span = document.createElement("span");
   span.innerText = newToDo.text;
-  const button = document.createElement("button");
-  button.innerText = "❌";
-  button.addEventListener("click", deleteToDo);
+  const radio = document.createElement("input");
+  radio.type = "radio";
+  radio.addEventListener("click", deleteToDo);
   li.appendChild(span);
-  li.appendChild(button);
+  li.appendChild(radio);
   toDoList.appendChild(li);
 }
 
