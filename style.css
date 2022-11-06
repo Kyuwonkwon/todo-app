@@ -1,5 +1,6 @@
 @import url(reset.css);
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Sans+Mono:wght@400;600&family=Noto+Serif+KR:wght@400;600&display=swap");
+
 /* font-family: "Noto Sans KR", sans-serif;
 font-family: "Noto Sans Mono", monospace;
 font-family: "Noto Serif KR", serif; */
@@ -42,25 +43,41 @@ body {
 
 main {
   width: 100vw;
-  height: 34vh;
+  height: 36vh;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   text-align: center;
-  color: aliceblue;
-  opacity: 0.7;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  opacity: 0.6;
+  position: relative;
 }
 
 main #clock {
+  position: absolute;
   font-weight: 700;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
-  opacity: 0.7;
-  font-size: 10vh;
+  opacity: 0.9;
+  font-size: 14vh;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 40vw;
+  top: 15vh;
+  left: 30vw;
+}
+
+#greeting {
+  font-size: 4vh;
 }
 
 main #weather {
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
+
 #todo-form {
-  height: 33vh;
+}
+.lower-bar {
+  height: 36vh;
+  font-family: "Noto Sans Mono", monospace;
 }

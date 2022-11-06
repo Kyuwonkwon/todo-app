@@ -9,7 +9,7 @@
   <body>
     <div class="upper">
       <div id="upper-bar">
-        <span>설정</span>
+        <span><i class="fas fa-cog"></i></span>
         <span></span>
         <span>
           <button>미니</button>
@@ -26,9 +26,13 @@
         <span id="greeting"></span>
       </div>
       <span id="clock">00:00:00</span>
-      <span id="weather">inchen clear 10°/1°</span>
+      <span id="weather">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
     </main>
-    <div>
+    <div class="lower-bar">
       <form id="todo-form">
         <input type="text" placeholder="해야 할 일이있나요?" required />
       </form>
@@ -40,5 +44,7 @@
     <script src="src/js/greeting.js"></script>
     <script src="src/js/clock.js"></script>
     <script src="src/js/background.js"></script>
+    <script src="src/js/weather.js"></script>
+    <script src="https://kit.fontawesome.com/a2531eaf71.js" crossorigin="anonymous"></script>
   </body>
 </html>
